@@ -1,0 +1,22 @@
+{
+  "name": "prepforge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local interview preparation web application with spaced repetition",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node --watch server/index.js",
+    "client": "vite client",
+    "seed": "node server/db/seed.js",
+    "setup": "node server/db/setup.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "vite": "^5.0.0"
+  }
+}
